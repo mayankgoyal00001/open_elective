@@ -117,7 +117,9 @@ from fastapi.responses import FileResponse
 
 # Check for production frontend build in multiple standard locations
 FRONTEND_DIST_PATHS = [
-    Path(__file__).parent.parent / "frontend" / "dist",
+    Path(__file__).resolve().parent.parent / "frontend" / "dist",
+    Path.cwd() / "frontend" / "dist",
+    Path.cwd().parent / "frontend" / "dist",
     Path(__file__).parent / "static",
     Path("/app/frontend/dist"),
 ]
