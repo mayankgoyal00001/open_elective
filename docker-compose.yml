@@ -1,0 +1,11 @@
+services:
+  smartv2v:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: smartv2v-platform
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    restart: unless-stopped

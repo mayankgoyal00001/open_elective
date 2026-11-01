@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #070A10;
+    color: #F1F5F9;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar for automotive event logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Pulse animation for active critical collision */
+@keyframes critical-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-critical-pulse {
+  animation: critical-pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
