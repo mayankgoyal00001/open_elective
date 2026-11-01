@@ -2,20 +2,6 @@
 node_modules/
 frontend/node_modules/
 
-# Python caches
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.pytest_cache/
-.coverage
-htmlcov/
-*.log
-
-# Build outputs
-# Note: Docker will build frontend fresh in Stage 1
-frontend/dist/
-
 # OS and Editor files
 .DS_Store
 Thumbs.db
